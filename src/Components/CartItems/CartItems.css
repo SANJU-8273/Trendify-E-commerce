@@ -1,0 +1,152 @@
+.cart {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+.cart__header,
+.cart__item {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  padding: 12px 0;
+}
+
+.cart__item {
+  font-weight: 500;
+  font-size: 15px;
+  border-top: 1px solid #eee;
+}
+
+.cart__item-img {
+  width: 80px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.cart__remove-icon {
+  width: 18px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cart__remove-icon:hover {
+  transform: scale(1.2);
+}
+
+.cart__qty {
+  width: 48px;
+  height: 38px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart__summary {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  gap: 40px;
+}
+
+.cart__total {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cart__summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.cart__summary-row.total {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cart__checkout-btn {
+  margin-top: 20px;
+  padding: 14px 32px;
+  font-size: 16px;
+  background-color: #ff5a5a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cart__checkout-btn:hover {
+  background-color: #e74c3c;
+}
+
+.cart__promo {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cart__promo p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.cart__promo-box {
+  display: flex;
+  gap: 10px;
+}
+
+.cart__promo-box input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.cart__promo-box button {
+  padding: 12px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart__header,
+  .cart__item {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .cart__summary {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cart__promo-box {
+    flex-direction: column;
+  }
+
+  .cart__promo-box button {
+    width: 100%;
+  }
+}
